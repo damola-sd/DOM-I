@@ -43,10 +43,31 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let links = document.querySelectorAll("a");
-for (let i = 0; i < siteContent.nav.length; i++) {
-  links.forEach (item => item.textContent(siteContent.nav[i]));
-}
+// let links = document.querySelectorAll("a");
+// links.forEach (item => item.textContent(siteContent.nav.nav-item));
+let nav = document.querySelector("nav");
+nav.setAttribute('style', 'color: green');
+let links = document.querySelector('a');
+links.setAttribute('style', "color: inherit");
+
+// nav.style.color = 'green';
+const newLink = document.createElement('a');
+newLink.textContent = 'Sign In';
+newLink.href = '#';
+nav.appendChild(newLink);
+
+
+
+nav.prepend("Welcome");
+
+
+nav.children[0].textContent = siteContent.nav["nav-item-1"];
+nav.children[1].textContent = siteContent.nav["nav-item-2"];
+nav.children[2].textContent = siteContent.nav["nav-item-3"];
+nav.children[3].textContent = siteContent.nav["nav-item-4"];
+nav.children[4].textContent = siteContent.nav["nav-item-5"];
+nav.children[5].textContent = siteContent.nav["nav-item-6"];
+
 
 let ctaHeader = document.querySelector("h1");
 ctaHeader.textContent = siteContent.cta.h1;
