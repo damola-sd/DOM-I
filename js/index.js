@@ -37,6 +37,59 @@ const siteContent = {
   },
 };
 
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let links = document.querySelectorAll("a");
+for (let i = 0; i < siteContent.nav.length; i++) {
+  links.forEach (item => item.textContent(siteContent.nav[i]));
+}
+
+let ctaHeader = document.querySelector("h1");
+ctaHeader.textContent = siteContent.cta.h1;
+
+let ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent.cta.button;
+
+ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let mainSection = document.querySelector(".main-content");
+let topSection = mainSection.querySelector(".top-content");
+let topSectionText = topSection.querySelector(".text-content");
+topSectionText.children[0].textContent = siteContent["main-content"]["features-h4"];
+topSectionText.children[1].textContent = siteContent["main-content"]["features-content"];
+
+
+let secondTopSectionText = topSection.children[1];
+secondTopSectionText.children[0].textContent = siteContent["main-content"]["about-h4"];
+secondTopSectionText.children[1].textContent = siteContent["main-content"]["about-content"];
+
+
+document.querySelector("#middle-img").src = siteContent["main-content"]["middle-img-src"];
+
+let bottomSection = mainSection.querySelector(".bottom-content");
+let bottomSectionText = bottomSection.querySelector(".text-content");
+bottomSectionText.children[0].textContent = siteContent["main-content"]["services-h4"];
+bottomSectionText.children[1].textContent = siteContent["main-content"]["services-content"];
+
+let secondBottomSectionText = bottomSection.children[1];
+secondBottomSectionText.children[0].textContent = siteContent["main-content"]["product-h4"];
+secondBottomSectionText.children[1].textContent = siteContent["main-content"]["product-content"];
+
+
+let thirdBottomSectionText = bottomSection.children[2];
+thirdBottomSectionText.children[0].textContent = siteContent["main-content"]["vision-h4"];
+thirdBottomSectionText.children[1].textContent = siteContent["main-content"]["vision-content"];
+let contactSection = document.querySelector(".contact");
+
+contactSection.children[0].textContent = siteContent.contact["contact-h4"];
+contactSection.children[1].textContent = siteContent.contact.address;
+contactSection.children[2].textContent = siteContent.contact.phone;
+contactSection.children[3].textContent = siteContent.contact.email;
+
+let footer = document.querySelector("footer");
+footer.children[0].textContent = siteContent.footer.copyright;
