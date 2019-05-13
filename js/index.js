@@ -47,13 +47,15 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // links.forEach (item => item.textContent(siteContent.nav.nav-item));
 let nav = document.querySelector("nav");
 nav.setAttribute('style', 'color: green');
-let links = document.querySelector('a');
-links.setAttribute('style', "color: inherit");
+let links = document.querySelectorAll('a');
+links.forEach(item => item.style.color = "inherit");
+// links.setAttribute('style', "color: inherit");
 
 // nav.style.color = 'green';
 const newLink = document.createElement('a');
 newLink.textContent = 'Sign In';
 newLink.href = '#';
+newLink.style.color = "inherit";
 nav.appendChild(newLink);
 
 nav.prepend("Welcome");
