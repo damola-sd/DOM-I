@@ -56,10 +56,7 @@ newLink.textContent = 'Sign In';
 newLink.href = '#';
 nav.appendChild(newLink);
 
-
-
 nav.prepend("Welcome");
-
 
 nav.children[0].textContent = siteContent.nav["nav-item-1"];
 nav.children[1].textContent = siteContent.nav["nav-item-2"];
@@ -84,11 +81,9 @@ let topSectionText = topSection.querySelector(".text-content");
 topSectionText.children[0].textContent = siteContent["main-content"]["features-h4"];
 topSectionText.children[1].textContent = siteContent["main-content"]["features-content"];
 
-
 let secondTopSectionText = topSection.children[1];
 secondTopSectionText.children[0].textContent = siteContent["main-content"]["about-h4"];
 secondTopSectionText.children[1].textContent = siteContent["main-content"]["about-content"];
-
 
 document.querySelector("#middle-img").src = siteContent["main-content"]["middle-img-src"];
 
@@ -100,7 +95,6 @@ bottomSectionText.children[1].textContent = siteContent["main-content"]["service
 let secondBottomSectionText = bottomSection.children[1];
 secondBottomSectionText.children[0].textContent = siteContent["main-content"]["product-h4"];
 secondBottomSectionText.children[1].textContent = siteContent["main-content"]["product-content"];
-
 
 let thirdBottomSectionText = bottomSection.children[2];
 thirdBottomSectionText.children[0].textContent = siteContent["main-content"]["vision-h4"];
